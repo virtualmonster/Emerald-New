@@ -1,0 +1,90 @@
+note: Extracted from Register User.dtx.yaml
+configuration:
+  vars:
+    APP_Emerald_URL: https://commerce-preview.sbx0032.play.hclsofy.com/Emerald
+    Email_Address: name44@domain.com
+    First_Name: firstname
+    Last_Name: lastname
+    Password: Gr33nhat
+steps:
+  - with:
+      note: Welcome to Emerald
+      steps:
+        - click:
+            shot: ../Welcome to Emerald_vwcj7s.dti.jpeg#44
+            object: html.p
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Sign In / Register
+  - with:
+      note: Emerald
+      steps:
+        - click:
+            shot: ../Emerald_pjtveh.dti.jpeg#400
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Register Now
+        - click:
+            shot: ../Emerald_x2qjtb.dti.jpeg#542
+            object: html.inputemail
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Email Address *
+        - type:
+            shot: ../Emerald_rj72cv.dti.jpeg#743
+            object: html.inputemail
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Email Address *
+            value: '${Email_Address}'
+        - click:
+            shot: ../Emerald_ybpgu5.dti.jpeg#1152
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: First Name *
+        - type:
+            shot: ../Emerald_jxvodf.dti.jpeg#1353
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: First Name *
+            value: '${First_Name}'
+        - type:
+            shot: ../Emerald_astkwl.dti.jpeg#1562
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Last Name *
+            value: '${Last_Name}'
+        - type:
+            shot: ../Emerald_6cdm34.dti.jpeg#1772
+            object: html.inputpassword
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Password *
+            value: '${Password}'
+        - type:
+            shot: ../Emerald_7srwur.dti.jpeg#1981
+            object: html.inputpassword
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Verify Password *
+            value: '${Password}'
+        - click:
+            shot: ../Emerald_i4s6nm.dti.jpeg#2413
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Complete Registration

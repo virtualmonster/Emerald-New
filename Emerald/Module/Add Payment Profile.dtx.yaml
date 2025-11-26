@@ -1,0 +1,242 @@
+note: Extracted from Register User.dtx.yaml
+configuration:
+  vars:
+    Address_line_1: address1
+    City: city
+    Country: country
+    State_Province: state
+    Zip_Postal_code: postcode
+    Checkout_Profile_Name: profile1
+    TYPE_5: '4111111111111111'
+steps:
+  - with:
+      note: Welcome to Emerald
+      steps:
+        - click:
+            shot: ../Welcome to Emerald_tceufz.dti.jpeg#3338
+            object: html.svg
+            identifiers:
+              - properties:
+                  - data-testid:
+                      - val: ExpandMoreIcon
+                locators:
+                  - inside:
+                      object: html.div
+                      properties:
+                        - content:
+                            - val: Your Account
+        - click:
+            shot: ../Welcome to Emerald_6xnjvt.dti.jpeg#3635
+            object: html.span
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Account settings
+  - with:
+      note: Emerald
+      steps:
+        - click:
+            shot: ../Emerald_2cschf.dti.jpeg#3985
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Edit
+        - click:
+            shot: ../Emerald_famqdo.dti.jpeg#4243
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Address line 1 *
+        - type:
+            shot: ../Emerald_t3oogq.dti.jpeg#4530
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Address line 1 *
+            value: '${Address_line_1}'
+        - type:
+            shot: ../Emerald_b6llwf.dti.jpeg#4824
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: City *
+            value: '${City}'
+        - type:
+            shot: ../Emerald_6nc7yc.dti.jpeg#5120
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Country *
+            value: '${Country}'
+        - type:
+            shot: ../Emerald_lq53ia.dti.jpeg#5416
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: State / Province *
+            value: '${State_Province}'
+        - type:
+            shot: ../Emerald_3ziwvv.dti.jpeg#5713
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Zip / Postal code *
+            value: '${Zip_Postal_code}'
+        - click:
+            shot: ../Emerald_z4xq7a.dti.jpeg#6223
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Save changes
+        - click:
+            shot: ../Emerald_rwtppy.dti.jpeg#6580
+            object: html.h6
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Checkout Profiles
+  - with:
+      note: Emerald
+      steps:
+        - click:
+            shot: ../Emerald_uiqvsp.dti.jpeg#6764
+            object: html.h5
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Create a new Checkout Profile
+        - click:
+            shot: ../Emerald_w2vxmy.dti.jpeg#6977
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Checkout Profile Name
+        - type:
+            shot: ../Emerald_nqu56f.dti.jpeg#7180
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Checkout Profile Name
+            value: '${Checkout_Profile_Name}'
+        - click:
+            shot: ../Emerald_gv6hqx.dti.jpeg#7604
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Create New
+  - with:
+      note: Emerald
+      steps:
+        - click:
+            shot: ../Emerald_7fqnif.dti.jpeg#7808
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Checkout Profile Name *
+        - type:
+            shot: ../Emerald_43e62j.dti.jpeg#8294
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Checkout Profile Name *
+            value: '${Checkout_Profile_Name}'
+        - select:
+            shot: ../Emerald_iw3u7i.dti.jpeg#8547
+            object: html.select
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Shipping Method
+            value: International Priority
+        - click:
+            shot: ../Emerald_k4rvmm.dti.jpeg#8816
+            object: html.p
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Use This Address
+        - click:
+            shot: ../Emerald_k56ao5.dti.jpeg#9075
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Next
+        - click:
+            shot: ../Emerald_aleqg3.dti.jpeg#9268
+            object: html.inputcheckbox
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Billing Address is the same as Shipping Address
+        - select:
+            shot: ../Emerald_nhw24v.dti.jpeg#9544
+            object: html.select
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Payment Method
+            value: VISA Credit Card
+        - click:
+            shot: ../Emerald_6ufd73.dti.jpeg#9793
+            object: html.inputtextfield
+            identifiers:
+              - properties:
+                  - xpath:
+                      - val: //input[@id='mui-26']
+                locators:
+                  - below:
+                      object: html.label
+                      properties:
+                        - content:
+                            - val: Credit Card Number
+        - type:
+            shot: ../Emerald_nwa3bg.dti.jpeg#10325
+            object: html.inputtextfield
+            identifiers:
+              - properties:
+                  - xpath:
+                      - val: //input[@id='mui-26']
+                locators:
+                  - below:
+                      object: html.label
+                      properties:
+                        - content:
+                            - val: Credit Card Number
+            value: '${TYPE_5}'
+        - select:
+            shot: ../Emerald_xkibxu.dti.jpeg#10599
+            object: html.select
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Expiry Month
+            value: '01'
+        - select:
+            shot: ../Emerald_idi367.dti.jpeg#10875
+            object: html.select
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Expiry Year
+            value: '2031'
+        - click:
+            shot: ../Emerald_it6jej.dti.jpeg#11157
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Create Profile

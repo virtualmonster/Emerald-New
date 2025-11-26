@@ -1,0 +1,57 @@
+note: Generated from recorded traffic using edge 141.0.3537.71
+configuration:
+  dataset: user registration.csv
+  profile: edge
+  vars:
+    APP_Emerald_URL:
+      expr: https://commerce-preview.sbx0111.play.hclsofy.com/Emerald
+      type: val
+      modifier: in
+    Email_Address:
+      expr: Email_Address
+      type: column
+      modifier: in
+    First_Name:
+      expr: First_Name
+      type: column
+      modifier: in
+    Last_Name:
+      expr: Last_Name
+      type: column
+      modifier: in
+    Password: a15c3dgfw1@kla
+    Address_line_1:
+      expr: address1
+      type: val
+      modifier: in
+    City:
+      expr: city
+      type: val
+      modifier: in
+    Country:
+      expr: country
+      type: val
+      modifier: in
+    State_Province:
+      expr: state
+      type: val
+      modifier: in
+    Zip_Postal_code:
+      expr: postcode
+      type: val
+      modifier: in
+    Checkout_Profile_Name:
+      expr: profile1
+      type: val
+      modifier: in
+    TYPE_5:
+      expr: '4111111111111111'
+      type: val
+      modifier: in
+steps:
+  - open:
+      note: Open Emerald
+      url: '${APP_Emerald_URL}'
+  - run: Module/Register User.dtx.yaml
+  - run: Module/Add Payment Profile.dtx.yaml
+  - run: Module/Sign Out.dtx.yaml

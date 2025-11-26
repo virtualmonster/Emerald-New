@@ -1,0 +1,30 @@
+note: Extracted from Register User.dtx.yaml
+configuration: {}
+steps:
+  - with:
+      note: Emerald
+      steps:
+        - click:
+            shot: ../Emerald_ns3trl.dti.jpeg#13422
+            object: html.p
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Your Account
+        - click:
+            shot: ../Emerald_zsbuqm.dti.jpeg#13699
+            object: html.span
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Sign out
+  - with:
+      note: Emerald
+      steps:
+        - click:
+            shot: ../Emerald_g7yddd.dti.jpeg#13915
+            object: html.img
+            identifiers:
+              - properties:
+                  - src:
+                      - val: /EmeraldSAS/images/type-icons/hcl-logo.svg

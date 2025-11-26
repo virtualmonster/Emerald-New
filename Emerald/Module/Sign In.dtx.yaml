@@ -1,0 +1,66 @@
+note: Extracted from Register User.dtx.yaml
+configuration:
+  vars:
+    Email_Address:
+      expr: name44@domain.com
+      type: val
+      modifier: in
+    First_Name:
+      expr: firstname
+      type: val
+      modifier: in
+    Last_Name:
+      expr: lastname
+      type: val
+      modifier: in
+    Password:
+      expr: Gr33nhat
+      type: val
+      modifier: in
+    APP_Emerald_URL: https://commerce-preview.sbx0111.play.hclsofy.com/Emerald/
+steps:
+  - open:
+      url: '${APP_Emerald_URL}'
+  - with:
+      note: Welcome to Emerald
+      steps:
+        - click:
+            shot: ../Welcome to Emerald_vwcj7s.dti.jpeg#44
+            object: html.p
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Sign In / Register
+  - with:
+      note: Emerald
+      steps:
+        - type:
+            shot: ../Emerald_pjtveh.dti.jpeg#400
+            object: html.inputemail
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Email Address *
+            value: '${Email_Address}'
+        - type:
+            shot: ../Emerald_pjtveh.dti.jpeg#400
+            object: html.inputpassword
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Password *
+            value: '${Password}'
+        - click:
+            shot: ../Emerald_pjtveh.dti.jpeg#400
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Sign In
+        - click:
+            shot: ../Emerald_pjtveh.dti.jpeg#400
+            object: html.img
+            identifiers:
+              - properties:
+                  - src:
+                      - val: /EmeraldSAS/images/type-icons/hcl-logo.svg
